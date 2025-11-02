@@ -12,16 +12,16 @@
 <p>
   <p-table [value]="vehicles" [tableStyle]="{ 'min-width': '50rem' }">
     <ng-template pTemplate="header">
-      <tr>
-        <th>#</th>
-        <th>Marca</th>
-        <th>Línea</th>
-        <th>Modelo</th>
+      <tr >
+        <th style="background-color: #333A40; color: white;">#</th>
+        <th style="background-color: #333A40; color: white;">Marca</th>
+        <th style="background-color: #333A40; color: white;"> Línea</th>
+        <th style="background-color: #333A40; color: white;">Modelo</th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-vehicle>
       <tr>
-        <td>{{ vehicle.id }}</td>
+        <td><b>{{ vehicle.id }}</b></td>
         <td>{{ vehicle.marca }}</td>
         <td>{{ vehicle.linea }}</td>
         <td>{{ vehicle.modelo }}</td>

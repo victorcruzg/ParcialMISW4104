@@ -1,7 +1,39 @@
-<div class="container-fluid">
-  <div class="row">
-      <div class="col mb-2" *ngFor="let book of vehicles">
-         {{book.marca}}
-      </div>
-  </div>
-</div>
+<h2>Tu segundazo.com</h2>
+
+<p-divider type="solid" />
+<p>
+  <p-image src="assets/image.png" alt="Image" width="100%">
+    <ng-template pTemplate="indicator">
+      <i class="pi pi-check"></i>
+    </ng-template>
+  </p-image>
+</p>
+<p-divider type="dotted" />
+<p>
+  <p-table [value]="vehicles" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>#</th>
+        <th>Marca</th>
+        <th>Línea</th>
+        <th>Modelo</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-vehicle>
+      <tr>
+        <td>{{ vehicle.id }}</td>
+        <td>{{ vehicle.marca }}</td>
+        <td>{{ vehicle.linea }}</td>
+        <td>{{ vehicle.modelo }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</p>
+
+<p *ngFor="let countVehicle of mapCountVehicle | keyvalue">
+  Total {{countVehicle.key}}: {{countVehicle.value}}
+</p>
+<p-divider type="dashed" />
+<footer class="bg-primary text-black text-center py-3">
+  <p>Contact us: +57 3102105253 - info&#64;tusegundazo.com - &#64;tusegundazo</p>
+</footer>
